@@ -3,7 +3,7 @@ import { StrategiesListClient } from "@/components/strategies-list-client";
 import { fetchOverviewData } from "@/lib/data";
 
 export const metadata = {
-  title: "Strategy Library — EA Index",
+  title: "Strategy Library — EV — Expert Advisor Visualizer",
 };
 
 // Disable static regeneration — data fetched at request time from API

@@ -1,12 +1,12 @@
 """
-SQLite database layer for EA Index.
+SQLite database layer for EV — Expert Advisor Visualizer.
 Stores MetaTrader EA trade history, equity curves, and performance metrics.
 Provides connection management and schema initialization.
 """
 import sqlite3
 from pathlib import Path
 
-DB_PATH = Path(__file__).parent / "ea_index.db"
+DB_PATH = Path(__file__).parent / "uv_visualizer.db"
 
 
 def new_db_connection():

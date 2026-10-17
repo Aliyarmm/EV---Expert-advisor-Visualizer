@@ -37,7 +37,7 @@ export function Sidebar() {
           <h1
             className="text-xs font-mono uppercase tracking-widest text-text-tertiary"
           >
-            EA Index
+            EV — Expert Advisor Visualizer
           </h1>
         </div>
         <ul className="space-y-1">

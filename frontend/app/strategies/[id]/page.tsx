@@ -7,7 +7,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   const strategy = await fetchStrategyDetail(id);
   return {
-    title: `${strategy?.strategy?.name ?? "Strategy"} — EA Index`,
+    title: `${strategy?.strategy?.name ?? "Strategy"} — EV — Expert Advisor Visualizer`,
     description: strategy?.strategy?.logic ?? "Trading strategy detail",
   };
 }

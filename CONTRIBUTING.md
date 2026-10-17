@@ -1,6 +1,6 @@
-# Contributing to EA Index
+# Contributing to EV — Expert Advisor Visualizer
 
-Thank you for your interest in contributing to EA Index — a MetaTrader EA performance analytics dashboard!
+Thank you for your interest in contributing to EV — Expert Advisor Visualizer — a MetaTrader EA performance analytics dashboard!
 
 ## How to Contribute
 

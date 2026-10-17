@@ -1,9 +1,9 @@
 @echo off
-title EA Index - Start Both Servers
+title EV — Expert Advisor Visualizer - Start Both Servers
 color 0A
 
 echo ========================================
-echo   EA Index Trading Platform - Dev Mode
+echo   EV — Expert Advisor Visualizer Trading Platform - Dev Mode
 echo ========================================
 echo.
 
@@ -13,14 +13,14 @@ if "%PROJECT_ROOT:~-1%"=="\" set "PROJECT_ROOT=%PROJECT_ROOT:~0,-1%"
 
 REM Start backend in background
 echo [1/2] Starting backend (FastAPI on port 8000)...
-start "EA Index Backend" cmd /c "cd /d "%PROJECT_ROOT%\backend" && python -m uvicorn app.main:app --reload --port 8000"
+start "EV — Expert Advisor Visualizer Backend" cmd /c "cd /d "%PROJECT_ROOT%\backend" && python -m uvicorn app.main:app --reload --port 8000"
 
 REM Wait for backend to initialize
 timeout /t 3 /nobreak >nul
 
 REM Start frontend in background
 echo [2/2] Starting frontend (Next.js on port 3003)...
-start "EA Index Frontend" cmd /c "cd /d "%PROJECT_ROOT%\frontend" && npm run dev"
+start "EV — Expert Advisor Visualizer Frontend" cmd /c "cd /d "%PROJECT_ROOT%\frontend" && npm run dev"
 
 echo.
 echo Both servers starting...

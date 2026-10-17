@@ -1,5 +1,5 @@
 """
-Tests for the EA Index API.
+Tests for the EV — Expert Advisor Visualizer API.
 Run: pytest tests/ -v
 """
 import pytest
@@ -23,7 +23,7 @@ def test_root():
     r = client.get("/")
     assert r.status_code == 200
     data = r.json()
-    assert data["name"] == "EA Index API"
+    assert data["name"] == "EV — Expert Advisor Visualizer API"
     assert data["status"] == "running"
 
 

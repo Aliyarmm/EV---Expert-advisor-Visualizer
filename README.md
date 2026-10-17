@@ -1,13 +1,13 @@
 <!--
-  Meta: EA Index — open source MetaTrader expert advisor performance dashboard
+  Meta: EV — Expert Advisor Visualizer — open source MetaTrader expert advisor performance dashboard
   Keywords: GitHub MT5 trade journal dashboard backtest performance analysis EA
   Related: forex EA performance analyzer dashboard, MT4 MT5 trading analysis streamlit
 -->
 <p align="center">
-  <img src="assets/placeholder-logo.png" alt="EA Index" width="120" height="120" />
+  <img src="assets/placeholder-logo.png" alt="EV — Expert Advisor Visualizer" width="120" height="120" />
 </p>
 
-# EA Index — Trading Research Platform
+# EV — Expert Advisor Visualizer — Trading Research Platform
 
 <!--
   SEO: MetaTrader 5 backtest report dashboard Python HTML analytics
@@ -20,7 +20,7 @@
 A production-quality open-source trading research dashboard for analyzing **MetaTrader EA (Expert Advisor) performance**. Manages, backtests, validates, compares, and constructs portfolios of algorithmic trading strategies (MT4/MT5 EAs). Visualizes equity curves, drawdown, Sharpe ratio, and generates performance analytics reports.
 
 <div align="center">
-  <img src="assets/media/demo-video-placeholder.gif" alt="EA Index Demo" width="800" />
+  <img src="assets/media/demo-video-placeholder.gif" alt="EV — Expert Advisor Visualizer Demo" width="800" />
 </div>
 
 > 🎬 **Demo video**: [YouTube link placeholder] — Watch the full walkthrough of strategy analysis, equity curve visualization, and portfolio backtest dashboard.
@@ -80,7 +80,7 @@ A production-quality open-source trading research dashboard for analyzing **Meta
 ## Architecture
 
 ```
-EA index/
+EV/
 ├── backend/              # FastAPI backend
 │   ├── app/
 │   │   ├── api/          # REST endpoints (routes.py, backtest.py)

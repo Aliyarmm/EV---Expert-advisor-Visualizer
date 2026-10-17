@@ -430,7 +430,7 @@ export function StrategyDetailClient({ data }: StrategyDetailClientProps) {
 
       doc.setFontSize(20);
       doc.setFont("helvetica", "bold");
-      doc.text("EA Index — Strategy Report", 60, 60);
+      doc.text("EV — Expert Advisor Visualizer — Strategy Report", 60, 60);
       doc.setFontSize(9);
       doc.setFont("helvetica", "normal");
       doc.setTextColor(100, 100, 100);
@@ -461,7 +461,7 @@ export function StrategyDetailClient({ data }: StrategyDetailClientProps) {
         headStyles: { fillColor: [0, 122, 255] },
       });
 
-      doc.save(`ea-index-${strategy.id}-report.pdf`);
+      doc.save(`uv-visualizer-${strategy.id}-report.pdf`);
       showToast("Report exported as PDF");
     } catch {
       window.alert("Could not export report. The backend may be unavailable.");

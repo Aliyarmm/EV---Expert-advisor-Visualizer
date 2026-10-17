@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 const STEPS = [
   {
     icon: TrendingUp,
-    title: "Welcome to EA Index",
+    title: "Welcome to EV — Expert Advisor Visualizer",
     description:
       "Your trading research platform for strategy backtesting, portfolio construction, and performance analysis.",
   },
@@ -57,17 +57,17 @@ export function Onboarding({ onDismiss }: { onDismiss: () => void }) {
   const [step, setStep] = useState(0);
 
   const handleComplete = () => {
-    localStorage.setItem("ea-index-onboarded", "1");
+    localStorage.setItem("uv-visualizer-onboarded", "1");
     onDismiss();
   };
 
   const handleSkip = () => {
-    localStorage.setItem("ea-index-onboarded", "1");
+    localStorage.setItem("uv-visualizer-onboarded", "1");
     onDismiss();
   };
 
   const handleDismiss = () => {
-    localStorage.setItem("ea-index-onboarded", "1");
+    localStorage.setItem("uv-visualizer-onboarded", "1");
     onDismiss();
   };
 

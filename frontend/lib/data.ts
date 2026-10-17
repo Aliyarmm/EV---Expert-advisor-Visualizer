@@ -1,4 +1,4 @@
-// Data fetching layer for EA Index.
+// Data fetching layer for EV — Expert Advisor Visualizer.
 // Uses local-first caching: API responses cached in localStorage for offline access.
 import {
   Strategy,

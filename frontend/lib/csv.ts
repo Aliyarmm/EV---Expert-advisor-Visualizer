@@ -1,5 +1,5 @@
 /**
- * CSV serialization utilities for EA Index.
+ * CSV serialization utilities for EV — Expert Advisor Visualizer.
  * Escapes values per RFC 4180 so commas, quotes, and newlines are handled safely.
  */
 

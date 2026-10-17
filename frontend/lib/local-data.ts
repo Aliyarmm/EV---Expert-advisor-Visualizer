@@ -1,10 +1,10 @@
-// Local-first data layer for EA Index.
+// Local-first data layer for EV — Expert Advisor Visualizer.
 // Caches API responses in localStorage with TTL for offline access.
 // On online: sync with backend. On offline: serve from cache.
 
 import { Strategy, OverviewMetrics, Book, BookMetric } from "@/lib/types";
 
-const CACHE_PREFIX = "ea-index-cache-v2";
+const CACHE_PREFIX = "uv-visualizer-cache-v2";
 
 interface CacheEntry<T> {
   data: T;

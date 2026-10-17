@@ -1,5 +1,5 @@
 /**
- * Type definitions for EA Index Trading Research Platform.
+ * Type definitions for EV — Expert Advisor Visualizer Trading Research Platform.
  * These mirror the backend Pydantic models and DB response shapes.
  */
 

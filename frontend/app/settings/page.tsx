@@ -1,7 +1,7 @@
 import { SettingsPanel } from "@/components/settings-panel";
 
 export const metadata = {
-  title: "Settings — EA Index",
+  title: "Settings — EV — Expert Advisor Visualizer",
   description: "Data management, risk settings, and export configuration",
 };
 

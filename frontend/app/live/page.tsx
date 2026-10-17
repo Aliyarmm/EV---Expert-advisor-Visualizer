@@ -1,7 +1,7 @@
 import { LiveMonitor } from "@/components/live-monitor";
 
 export const metadata = {
-  title: "Live Trading — EA Index",
+  title: "Live Trading — EV — Expert Advisor Visualizer",
   description: "Real-time position monitoring and connection status",
 };
 

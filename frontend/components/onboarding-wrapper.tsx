@@ -7,7 +7,7 @@ export function OnboardingWrapper() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const onboarded = localStorage.getItem("ea-index-onboarded");
+    const onboarded = localStorage.getItem("uv-visualizer-onboarded");
     if (!onboarded) setShow(true);
   }, []);
 

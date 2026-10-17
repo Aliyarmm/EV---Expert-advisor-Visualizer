@@ -1,20 +1,20 @@
 @echo off
-title EA Index - Stop Servers
+title EV — Expert Advisor Visualizer - Stop Servers
 color 0C
 
 echo ========================================
-echo   Stopping EA Index Servers
+echo   Stopping EV — Expert Advisor Visualizer Servers
 echo ========================================
 echo.
 
-taskkill /FI "WINDOWTITLE" eq "EA Index Backend" /F 2>nul
+taskkill /FI "WINDOWTITLE" eq "EV — Expert Advisor Visualizer Backend" /F 2>nul
 if %ERRORLEVEL% EQU 0 (
     echo Stopped backend server
 ) else (
     echo Backend was not running
 )
 
-taskkill /FI "WINDOWTITLE" eq "EA Index Frontend" /F 2>nul
+taskkill /FI "WINDOWTITLE" eq "EV — Expert Advisor Visualizer Frontend" /F 2>nul
 if %ERRORLEVEL% EQU 0 (
     echo Stopped frontend server
 ) else (

@@ -7,7 +7,7 @@ body:
   type: markdown
   attributes:
     value: |
-      Thanks for reporting a bug in EA Index! Please fill out the details below.
+      Thanks for reporting a bug in EV — Expert Advisor Visualizer! Please fill out the details below.
   type: textarea
   id: description
   attributes:

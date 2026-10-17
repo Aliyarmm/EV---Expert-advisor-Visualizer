@@ -1,7 +1,7 @@
 import { PortfolioBuilder } from "@/components/portfolio-builder";
 
 export const metadata = {
-  title: "Portfolio Books — EA Index",
+  title: "Portfolio Books — EV — Expert Advisor Visualizer",
   description: "Drag-and-drop portfolio construction with real-time metrics",
 };
 

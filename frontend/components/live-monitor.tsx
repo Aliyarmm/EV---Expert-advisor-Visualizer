@@ -168,7 +168,7 @@ function loadFromStorage<T>(key: string, fallback: T): T {
 
 export function LiveMonitor() {
   const [connections, setConnections] = useState<BrokerConnection[]>(() =>
-    loadFromStorage("ea-index-connections", SEED_CONNECTIONS),
+    loadFromStorage("uv-visualizer-connections", SEED_CONNECTIONS),
   );
 
   const [showAddBroker, setShowAddBroker] = useState(false);
@@ -179,25 +179,25 @@ export function LiveMonitor() {
 
   // Persist toggle preference
   useEffect(() => {
-    const saved = localStorage.getItem("ea-index-show-broker-connections");
+    const saved = localStorage.getItem("uv-visualizer-show-broker-connections");
     if (saved !== null) setShowBrokerConnections(saved === "true");
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("ea-index-show-broker-connections", String(showBrokerConnections));
+    localStorage.setItem("uv-visualizer-show-broker-connections", String(showBrokerConnections));
   }, [showBrokerConnections]);
 
   const [trades, setTrades] = useState<LiveTrade[]>(() =>
-    loadFromStorage("ea-index-trades", SEED_TRADES),
+    loadFromStorage("uv-visualizer-trades", SEED_TRADES),
   );
 
   // Persist connections & trades to localStorage
   useEffect(() => {
-    localStorage.setItem("ea-index-connections", JSON.stringify(connections));
+    localStorage.setItem("uv-visualizer-connections", JSON.stringify(connections));
   }, [connections]);
 
   useEffect(() => {
-    localStorage.setItem("ea-index-trades", JSON.stringify(trades));
+    localStorage.setItem("uv-visualizer-trades", JSON.stringify(trades));
   }, [trades]);
 
   // Start as null so SSR markup matches the client's first render, then set

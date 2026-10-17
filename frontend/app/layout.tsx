@@ -9,7 +9,7 @@ import { OnboardingWrapper } from "@/components/onboarding-wrapper";
 import { KeyboardNav } from "@/components/keyboard-nav";
 
 export const metadata: Metadata = {
-  title: "EA Index — Trading Research Platform",
+  title: "EV — Expert Advisor Visualizer — Trading Research Platform",
   description: "Strategy library, backtesting, and portfolio construction for algorithmic traders",
 };
 

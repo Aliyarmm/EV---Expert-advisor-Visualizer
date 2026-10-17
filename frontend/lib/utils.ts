@@ -1,5 +1,5 @@
 /**
- * Formatting utilities for EA Index.
+ * Formatting utilities for EV — Expert Advisor Visualizer.
  */
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";

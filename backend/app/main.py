@@ -6,7 +6,7 @@ from app.api.backtest import router as backtest_router
 from app.db import init_db
 
 app = FastAPI(
-    title="EA Index API",
+    title="EV — Expert Advisor Visualizer API",
     description="MetaTrader EA performance analytics dashboard — strategy management, backtesting, portfolio construction",
     version="1.0.0",
 )
@@ -26,4 +26,4 @@ init_db()
 
 @app.get("/")
 def root():
-    return {"name": "EA Index API", "status": "running", "version": "1.0.0"}
+    return {"name": "EV — Expert Advisor Visualizer API", "status": "running", "version": "1.0.0"}

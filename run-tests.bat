@@ -1,9 +1,9 @@
 @echo off
-title EA Index - Run All Tests
+title EV — Expert Advisor Visualizer - Run All Tests
 color 0E
 
 echo ========================================
-echo   EA Index - Test Suite
+echo   EV — Expert Advisor Visualizer - Test Suite
 echo ========================================
 echo.
 

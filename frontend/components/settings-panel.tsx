@@ -116,7 +116,7 @@ export function SettingsPanel() {
 
           doc.setFontSize(20);
           doc.setFont("helvetica", "bold");
-          doc.text("EA Index — Trading Performance Report", 59, 59);
+          doc.text("EV — Expert Advisor Visualizer — Trading Performance Report", 59, 59);
           doc.setFontSize(9);
           doc.setFont("helvetica", "normal");
           doc.setTextColor(100, 100, 100);
@@ -182,7 +182,7 @@ export function SettingsPanel() {
           const downloadUrl = URL.createObjectURL(pdfBlob);
           const a = document.createElement("a");
           a.href = downloadUrl;
-          a.download = `ea-index-report-${data.symbol}.pdf`;
+          a.download = `uv-visualizer-report-${data.symbol}.pdf`;
           a.click();
           URL.revokeObjectURL(downloadUrl);
           break;
@@ -201,7 +201,7 @@ export function SettingsPanel() {
           const downloadUrl = URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = downloadUrl;
-          a.download = `ea-index-export-${data.symbol}.csv`;
+          a.download = `uv-visualizer-export-${data.symbol}.csv`;
           a.click();
           URL.revokeObjectURL(downloadUrl);
           break;
@@ -221,7 +221,7 @@ export function SettingsPanel() {
               const url = URL.createObjectURL(blob);
               const a = document.createElement("a");
               a.href = url;
-              a.download = `ea-index-dashboard-${new Date().toISOString().slice(0, 10)}.png`;
+              a.download = `uv-visualizer-dashboard-${new Date().toISOString().slice(0, 10)}.png`;
               a.click();
               URL.revokeObjectURL(url);
             });
@@ -250,7 +250,7 @@ export function SettingsPanel() {
           const downloadUrl = URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = downloadUrl;
-          a.download = `ea-index-trades-${btData.symbol}.csv`;
+          a.download = `uv-visualizer-trades-${btData.symbol}.csv`;
           a.click();
           URL.revokeObjectURL(downloadUrl);
           break;
@@ -261,7 +261,7 @@ export function SettingsPanel() {
           if (!res.ok) throw new Error(`API error: ${res.status}`);
           const data = await res.json();
           const htmlContent = `<!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>EA Index Report</title>
+<html><head><meta charset="utf-8"><title>EV — Expert Advisor Visualizer Report</title>
 <style>
 body { font-family: -apple-system, sans-serif; margin: 40px; background: #0a0a0a; color: #e0e0e0; }
 h1 { color: #00aaff; }
@@ -271,7 +271,7 @@ th { background: #222; }
 .positive { color: #4ade80; }
 .negative { color: #f87171; }
 </style></head><body>
-<h1>EA Index — Trading Performance Report</h1>
+<h1>EV — Expert Advisor Visualizer — Trading Performance Report</h1>
 <p><strong>Symbol:</strong> ${data.symbol} | <strong>Timeframe:</strong> ${data.timeframe}</p>
 <p><strong>Period:</strong> ${data.data.config.start_date} → ${data.data.config.end_date}</p>
 <h2>Performance Metrics</h2>
@@ -289,7 +289,7 @@ ${Object.entries(data.data.metrics).map(([k, v]: [string, any]) =>
           const downloadUrl = URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = downloadUrl;
-          a.download = `ea-index-report-${data.symbol}.html`;
+          a.download = `uv-visualizer-report-${data.symbol}.html`;
           a.click();
           URL.revokeObjectURL(downloadUrl);
           break;
@@ -413,7 +413,7 @@ ${Object.entries(data.data.metrics).map(([k, v]: [string, any]) =>
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("ea-index-risk-settings");
+      const saved = localStorage.getItem("uv-visualizer-risk-settings");
       if (saved) {
         const parsed = JSON.parse(saved) as Record<string, number>;
         setRiskSettings((prev) =>
@@ -439,7 +439,7 @@ ${Object.entries(data.data.metrics).map(([k, v]: [string, any]) =>
       riskSettings.forEach((s) => {
         values[s.id] = s.value;
       });
-      localStorage.setItem("ea-index-risk-settings", JSON.stringify(values));
+      localStorage.setItem("uv-visualizer-risk-settings", JSON.stringify(values));
       setRiskSaved(true);
       window.setTimeout(() => setRiskSaved(false), 2000);
     } catch {

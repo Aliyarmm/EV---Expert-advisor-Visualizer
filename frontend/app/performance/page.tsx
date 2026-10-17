@@ -1,7 +1,7 @@
 import { PerformanceDashboard } from "@/components/performance-dashboard-client";
 
 export const metadata = {
-  title: "Performance — EA Index",
+  title: "Performance — EV — Expert Advisor Visualizer",
   description: "Portfolio performance dashboard with equity curves, risk contribution, and metrics",
 };
 

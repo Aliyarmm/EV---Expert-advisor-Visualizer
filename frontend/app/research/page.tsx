@@ -1,7 +1,7 @@
 import { ResearchLab } from "@/components/research-lab-client";
 
 export const metadata = {
-  title: "Research Lab — EA Index",
+  title: "Research Lab — EV — Expert Advisor Visualizer",
   description: "Strategy development, backtesting, and Monte Carlo simulation workspace",
 };
 
