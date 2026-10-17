@@ -1,0 +1,7 @@
+{
+  "name": "ea-index-trading-platform",
+  "version": "1.0.0",
+  "description": "Trading Research Platform — strategy library, backtesting, portfolio construction",
+  "private": true,
+  "workspaces": ["backend", "frontend"]
+}

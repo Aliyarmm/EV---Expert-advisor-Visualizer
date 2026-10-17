@@ -1,0 +1,27 @@
+{
+  "id": "strat-orb-v1",
+  "name": "Opening Range Breakout",
+  "family": "Session Breakouts",
+  "symbol": "SPY",
+  "timeframe": "5",
+  "status": "Live",
+  "logic": "Classic 30-minute opening range breakout strategy on S&P 500 ETF. Buys when price breaks above range high, sells short on range low break. Volume-weighted exits.",
+  "params": {
+    "range_minutes": 30,
+    "profit_target_pct": 1.0,
+    "stop_loss_pct": 0.6,
+    "trailing_stop_pct": 0.4,
+    "time_exit_minutes": 390
+  },
+  "metrics": {
+    "win_rate": 61.5,
+    "profit_factor": 1.95,
+    "max_drawdown": -9.7,
+    "sharpe_ratio": 1.55,
+    "calmar_ratio": 1.23,
+    "total_trades": 432,
+    "years_of_data": 4.0,
+    "avg_r_multiple": 1.42
+  },
+  "tags": ["etf", "spy", "opening-range", "swing", "day-trading"]
+}

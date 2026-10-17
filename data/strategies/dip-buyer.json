@@ -1,0 +1,28 @@
+{
+  "id": "strat-dip-buyer-v1",
+  "name": "Dip Buyer",
+  "family": "Mean Reversion / Dip Buyer",
+  "symbol": "AAPL",
+  "timeframe": "60",
+  "status": "Retired",
+  "logic": "Mean-reversion strategy on large-cap tech stocks. Buys dips below 2-standard deviation Bollinger Band with volume confirmation. Fixed fractional position sizing.",
+  "params": {
+    "bb_period": 20,
+    "bb_std_dev": 2.0,
+    "volume_ma_period": 20,
+    "volume_mult": 1.5,
+    "rsi_filter": 40,
+    "exit_method": "mean-reversion"
+  },
+  "metrics": {
+    "win_rate": 71.8,
+    "profit_factor": 1.42,
+    "max_drawdown": -31.2,
+    "sharpe_ratio": 0.78,
+    "calmar_ratio": 0.25,
+    "total_trades": 612,
+    "years_of_data": 3.5,
+    "avg_r_multiple": 0.89
+  },
+  "tags": ["stocks", "aapl", "mean-reversion", "swing", "retired-strategy"]
+}

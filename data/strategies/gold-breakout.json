@@ -1,0 +1,27 @@
+{
+  "id": "strat-gold-breakout-v1",
+  "name": "Gold Breakout",
+  "family": "Breakouts",
+  "symbol": "GC",
+  "timeframe": "60",
+  "status": "Live",
+  "logic": "Enters when price breaks above prior day's range high with volume confirmation. Exits at end of session or trailing stop.",
+  "params": {
+    "lookback_bars": 24,
+    "breakout_threshold_pct": 1.5,
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 3.0,
+    "volume_mult": 1.2
+  },
+  "metrics": {
+    "win_rate": 62.3,
+    "profit_factor": 1.85,
+    "max_drawdown": -18.4,
+    "sharpe_ratio": 1.42,
+    "calmar_ratio": 0.77,
+    "total_trades": 247,
+    "years_of_data": 3.2,
+    "avg_r_multiple": 1.48
+  },
+  "tags": ["commodities", "futures", "intraday", "trend-following"]
+}

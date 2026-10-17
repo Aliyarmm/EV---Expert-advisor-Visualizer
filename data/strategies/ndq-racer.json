@@ -1,0 +1,27 @@
+{
+  "id": "strat-ndq-racer-v1",
+  "name": "Nasdaq Racer",
+  "family": "Racers",
+  "symbol": "NQ",
+  "timeframe": "5",
+  "status": "Live",
+  "logic": "High-frequency momentum runner on Nasdaq 100 futures. Triggers on opening range expansion with volume spikes. Stops loss tight, rides trends with trailing stop.",
+  "params": {
+    "range_lookback": 30,
+    "volume_mult": 2.5,
+    "breakout_threshold": 0.005,
+    "trail_atr_mult": 2.0,
+    "max_holding_minutes": 240
+  },
+  "metrics": {
+    "win_rate": 48.2,
+    "profit_factor": 2.12,
+    "max_drawdown": -22.8,
+    "sharpe_ratio": 0.98,
+    "calmar_ratio": 0.43,
+    "total_trades": 1456,
+    "years_of_data": 1.5,
+    "avg_r_multiple": 2.15
+  },
+  "tags": ["futures", "nasdaq", "intraday", "momentum", "scalping", "high-frequency"]
+}

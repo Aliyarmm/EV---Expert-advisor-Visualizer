@@ -1,0 +1,37 @@
+# Auto-detect text files and normalize EOL
+* text=auto
+
+# Python
+*.py text eol=lf
+
+# JS/TS
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+
+# JSON
+*.json text eol=lf
+
+# YAML
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Markdown
+*.md text eol=lf
+
+# SQL
+*.sql text eol=lf
+
+# Shell scripts
+*.sh text eol=lf
+
+# Binary files (don't normalize)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.db binary
+
+# Database is gitignored

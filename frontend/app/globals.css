@@ -1,0 +1,245 @@
+/* Apple Design System — EA Index */
+/* Dark-first, SF Pro-style typography, vibrancy materials, interruptible springs */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SF Pro system font stack — respects Dynamic Type and optical sizing */
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Text", system-ui, sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+    --font-mono: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    --font-mono-size: 0.8125rem; /* 13pt on macOS */
+  }
+
+  html {
+    color-scheme: dark light;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Dark mode — calibrated to macOS System Preferences */
+  html.dark {
+    --color-base-background: #0a0a0c;
+    --color-base-background-secondary: #121216;
+    --color-base-background-tertiary: #1a1a20;
+    --color-base-background-elevated: #1f1f26;
+    --color-base-border: #2a2a32;
+    --color-base-border-hover: #3a3a44;
+    --color-label-primary: #f0f0f0;
+    --color-label-secondary: #b0b0b8;
+    --color-label-tertiary: #7a7a86;
+    --color-accent: #007aff;
+    --color-accent-hover: #0062cc;
+    --color-system-green: #28c774;
+    --color-system-red: #ff5252;
+    --color-system-orange: #ffc107;
+    --shadow-glass: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --shadow-glass-strong: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.35);
+    --blur-radius: 20px;
+    --blur-saturation: 180%;
+  }
+
+  /* Light mode — calibrated to macOS light appearance */
+  html.light {
+    --color-base-background: #f5f5f7;
+    --color-base-background-secondary: #e8e8ee;
+    --color-base-background-tertiary: #d2d2dc;
+    --color-base-background-elevated: #ffffff;
+    --color-base-border: #d2d2dc;
+    --color-base-border-hover: #b8b8c4;
+    --color-label-primary: #1d1d1f;
+    --color-label-secondary: #6e6e73;
+    --color-label-tertiary: #b0b0b8;
+    --color-accent: #007aff;
+    --color-accent-hover: #0062cc;
+    --color-system-green: #28c774;
+    --color-system-red: #ff3b30;
+    --color-system-orange: #ffc107;
+    --shadow-glass: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-glass-strong: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --shadow-elevated: 0 4px 24px rgba(0, 0, 0, 0.12);
+    --blur-radius: 16px;
+    --blur-saturation: 180%;
+  }
+
+  body {
+    background-color: var(--color-base-background);
+    color: var(--color-label-primary);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem; /* 15pt base */
+    line-height: 1.4;
+    font-weight: 400;
+    margin: 0;
+    font-feature-settings: "rlig" 1, "liga" 1, "calt" 1;
+    font-variant: contextual alternate;
+  }
+
+  /* Typography hierarchy — SF Pro optical sizing + size-specific tracking */
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  p, li {
+    letter-spacing: 0.001em;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+    font-size: var(--font-mono-size);
+  }
+
+  /* Color aliases for existing component classes */
+  :root {
+    --bg: var(--color-base-background);
+    --bg-secondary: var(--color-base-background-secondary);
+    --bg-tertiary: var(--color-base-background-tertiary);
+    --bg-elevated: var(--color-base-background-elevated);
+    --border: var(--color-base-border);
+    --border-hover: var(--color-base-border-hover);
+    --text: var(--color-label-primary);
+    --text-secondary: var(--color-label-secondary);
+    --text-tertiary: var(--color-label-tertiary);
+    --accent: var(--color-accent);
+    --accent-hover: var(--color-accent-hover);
+    --green: var(--color-system-green);
+    --red: var(--color-system-red);
+    --amber: var(--color-system-orange);
+  }
+}
+
+@layer components {
+  /* Vibrancy material — Apple-style translucent layer */
+  .glass {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(var(--blur-radius)) saturate(var(--blur-saturation));
+    -webkit-backdrop-filter: blur(var(--blur-radius)) saturate(var(--blur-saturation));
+    box-shadow: var(--shadow-glass);
+  }
+
+  html.light .glass {
+    background-color: rgba(255, 255, 255, 0.45);
+    border-color: rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-glass-light, 0 1px 3px rgba(0, 0, 0, 0.06));
+  }
+
+  .glass-strong {
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    box-shadow: var(--shadow-glass-strong);
+  }
+
+  html.light .glass-strong {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .glass-pop {
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(var(--blur-radius)) saturate(var(--blur-saturation));
+    -webkit-backdrop-filter: blur(var(--blur-radius)) saturate(var(--blur-saturation));
+    box-shadow: var(--shadow-elevated);
+  }
+
+  html.light .glass-pop {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-elevated-light, 0 4px 24px rgba(0, 0, 0, 0.08));
+  }
+
+  /* Status badges — SF Rounded Text style */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+  .badge-live { background-color: rgba(40, 199, 116, 0.15); color: var(--color-system-green); }
+  .badge-paper { background-color: rgba(0, 122, 255, 0.15); color: var(--color-accent); }
+  .badge-retired { background-color: rgba(148, 148, 156, 0.15); color: var(--color-label-tertiary); }
+  .badge-review { background-color: rgba(255, 193, 7, 0.15); color: var(--color-system-orange); }
+
+  /* Apple-style rounded corners (12pt radius per SF Pro) */
+  .rounded-apple {
+    border-radius: 12px;
+  }
+  .rounded-full {
+    border-radius: 9999px;
+  }
+
+  /* Custom scrollbar — Apple style, overlay on macOS */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-base-border);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-base-border-hover);
+  }
+
+  /* Smooth theme transitions — Apple-style 300ms ease */
+  .transition-theme {
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Focus ring — Apple blue, subtle */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Reduced motion — respect user preference */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Reduced transparency — make materials less frosted */
+  @media (prefers-reduced-transparency: reduce) {
+    .glass {
+      background-color: rgba(0, 0, 0, 0.65);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    html.light .glass {
+      background-color: #e8e8ee;
+    }
+  }
+}

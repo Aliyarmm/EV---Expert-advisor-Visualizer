@@ -1,0 +1,28 @@
+{
+  "id": "strat-eurusd-momentum-v1",
+  "name": "EUR/USD Momentum",
+  "family": "Opening Momentum",
+  "symbol": "EURUSD",
+  "timeframe": "15",
+  "status": "Paper",
+  "logic": "Captures intraday momentum in EUR/USD during London/NYC overlap. Enters on 5-bar momentum break with RSI filter, exits at fixed target or trailing stop.",
+  "params": {
+    "momentum_lookback": 5,
+    "rsi_period": 14,
+    "rsi_oversold": 35,
+    "rsi_overbought": 65,
+    "target_r": 1.5,
+    "stop_r": 1.0
+  },
+  "metrics": {
+    "win_rate": 58.7,
+    "profit_factor": 1.65,
+    "max_drawdown": -12.1,
+    "sharpe_ratio": 1.25,
+    "calmar_ratio": 0.89,
+    "total_trades": 892,
+    "years_of_data": 2.8,
+    "avg_r_multiple": 1.23
+  },
+  "tags": ["forex", "eurusd", "intraday", "momentum", "london-session"]
+}
