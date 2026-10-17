@@ -105,33 +105,83 @@ EV/
 - **Backend**: FastAPI + SQLite, numpy, pandas, scipy, pyarrow
 - **Design**: Apple Design System — SF Pro typography, glass materials, spring animations, 8pt grid
 
-## Setup
+## Installation
 
-### Prerequisites
-- Python 3.10+
-- Node.js 20+
-- npm or yarn
+### Quick Start (Docker)
 
-### Backend
+The easiest way to get started — Docker will set up both backend and frontend automatically:
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR-USERNAME/expert-advisor-visualizer.git
+cd expert-advisor-visualizer
+
+# 2. Start all services
+docker-compose up
+```
+
+Once running:
+- **Backend API**: http://localhost:8000
+- **Frontend Dashboard**: http://localhost:3003
+
+### Manual Installation (Local Development)
+
+If you prefer to run components individually without Docker:
+
+#### Prerequisites
+- **Python 3.10+** (https://www.python.org/downloads/)
+- **Node.js 20+** (https://nodejs.org/ → LTS version)
+- **npm** (comes with Node.js) or **yarn**
+
+#### Step 1: Backend Setup
+
+```bash
+# Install Python dependencies
 cd backend
 pip install -r requirements.txt
-python -m app.seed       # Seed database with sample strategies
+
+# Initialize the database with sample strategies
+python -m app.seed
+
+# Start the API server (in development mode with auto-reload)
 uvicorn app.main:app --reload --port 8000
 ```
 
-### Frontend
+> The API will be available at http://localhost:8000
+
+#### Step 2: Frontend Setup
 
 ```bash
+# Install Node.js dependencies
 cd frontend
 npm install
-# Create .env.local:
+
+# Create the environment file
 echo "NEXT_PUBLIC_API_BASE=http://localhost:8000/api/v1" > .env.local
+
+# Start the development server
 npm run dev
 ```
 
-### API Endpoints
+> The dashboard will be available at http://localhost:3000
+
+#### Step 3: Verify It's Working
+
+1. Open http://localhost:3000 in your browser
+2. You should see the EV dashboard with sample trading strategies loaded
+3. Navigate to "Strategy Library" to browse pre-loaded EA performance data
+
+### One-Click Scripts (Windows)
+
+If you're on Windows, use the included batch scripts:
+
+```cmd
+run-dev.bat     # Starts both backend and frontend servers
+run-tests.bat   # Runs all tests (TypeScript + Jest + pytest)
+stop-servers.bat # Stops any running servers
+```
+
+### API Endpoints Reference
 
 **Backend**: `http://localhost:8000` (API at `/api/v1`)
 **Frontend**: `http://localhost:3000`
@@ -166,11 +216,22 @@ npm run dev
 
 ## Usage
 
-1. Start the backend server (`uvicorn app.main:app --reload --port 8000`)
-2. Seed the database (`python -m app.seed`)
-3. Start the frontend (`npm run dev`)
-4. Open `http://localhost:3000` in your browser
-5. Explore strategies in the **Strategy Library**, build portfolios in **Portfolio Builder**, run backtests in the **Research Lab**, and upload/clean data in **Settings**
+After installation:
+
+1. Open http://localhost:3000 in your browser
+2. **Browse Strategies** in the Strategy Library — view equity curves, Sharpe ratios, max drawdowns
+3. **Build Portfolios** in Portfolio Builder — drag strategies into a book, configure risk weights
+4. **Run Backtests** in Research Lab — define entry/exit rules, test against historical data
+5. **Analyze Results** — use Monte Carlo simulation, walk-forward analysis, and correlation clustering
+6. **Export Reports** — generate PDF/HTML reports from the Settings page
+7. **Upload Data** — import your own CSV/Parquet trade history files in Settings
+
+### Keyboard Shortcuts
+- `/` — Focus search
+- `g` then `s` — Go to Strategies
+- `g` then `r` — Go to Research
+- `g` then `b` — Go to Books
+- `?` — Show all shortcuts
 
 ## License
 
